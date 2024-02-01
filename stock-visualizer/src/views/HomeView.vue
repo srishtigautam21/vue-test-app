@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-const resp = ref('')
+let resp = ref('')
 const callApi = async () => {
-  const response = await fetch('https://vue-test-app-api.vercel.app/')
+  const response = await fetch('http://localhost:8081')
   const data = response.json()
   resp = data
 }
